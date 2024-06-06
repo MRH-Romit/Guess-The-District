@@ -18,3 +18,4 @@ output_file_path = 'D:\Guess The District\Squirrel_Color_Categorization.csv'
 color_counts.to_csv(output_file_path, index=False)
 
 print(f"Data saved to {output_file_path}")
+
