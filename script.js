@@ -24,6 +24,12 @@ fetch('bangladesh_geojson_adm2_64_districts_zillas.json')
         fillOpacity: 0.6,
         fillColor: getRandomColor()
       }),
-      onEachFeature: () => {} // No popup or label
+      onEachFeature: function (feature, layer) {
+        layer.bindPopup(""); // Bind an empty popup
+        layer.bindTooltip(""); // Bind an empty tooltip
+        layer.off(); // Remove all event listeners (e.g., click)
+      }
+      
+      
     }).addTo(map);
   });
